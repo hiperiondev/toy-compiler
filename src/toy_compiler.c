@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #include "toy_compiler.h"
 #include "toy_memory.h"
@@ -631,6 +632,7 @@ static Toy_Opcode Toy_writeCompilerWithJumps(Toy_Compiler *compiler, Toy_ASTNode
                 compiler->bytecode[compiler->count++] = (unsigned char) identifierIndex; // 1 byte
                 compiler->bytecode[compiler->count++] = (unsigned char) fnIndex; // 1 byte
             }
+            free(fnCompiler);
         }
             break;
 

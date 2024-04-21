@@ -91,7 +91,17 @@ static void synchronize(Toy_Parser *parser) {
 
 // the pratt table collates the precedence rules
 typedef enum {
-    PREC_NONE, PREC_ASSIGNMENT, PREC_TERNARY, PREC_OR, PREC_AND, PREC_COMPARISON, PREC_TERM, PREC_FACTOR, PREC_UNARY, PREC_CALL, PREC_PRIMARY,
+    PREC_NONE,       //
+    PREC_ASSIGNMENT, //
+    PREC_TERNARY,    //
+    PREC_OR,         //
+    PREC_AND,        //
+    PREC_COMPARISON, //
+    PREC_TERM,       //
+    PREC_FACTOR,     //
+    PREC_UNARY,      //
+    PREC_CALL,       //
+    PREC_PRIMARY,    //
 } PrecedenceRule;
 
 typedef Toy_Opcode (*ParseFn)(Toy_Parser *parser, Toy_ASTNode **nodeHandle);

@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 #include "toy_refstring.h"
 
 // memory allocation
